@@ -1,0 +1,32 @@
+a = []
+e = int(input('Number of element: '))
+
+for j in range(0, e):
+    ele = int(input('Give some random numbers but in sorted way: '))
+    a.append(ele)
+
+g = int(input('Number to find: '))
+
+
+def binary():
+    d = len(a)
+    m = 0
+    n = d - 1
+    print(m)
+    print(n)
+
+    while m <= n:
+        mid = (m + n) // 2
+        print(mid)
+        print(a[mid])
+        if a[mid] == g:
+            print('Found at: ' + str(mid + 1))
+            break
+        else:
+            if a[mid] < g:
+                m = mid
+            elif a[mid] > g:
+                n = mid
+
+
+binary()
